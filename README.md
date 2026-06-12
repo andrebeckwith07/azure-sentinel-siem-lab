@@ -24,7 +24,7 @@ Deployed a Windows 10 VM in Azure configured as a honeypot. Set the Network Secu
 ## Step 2 – Observed Failed Login Attempts in Event Viewer
 <img width="700" src="https://github.com/user-attachments/assets/5127615c-8484-4f68-97e0-9d38e155f618" />
 
-RDP'd into the honeypot VM and opened Event Viewer. Found 36,000+ Event ID 4625 audit failures — real attackers brute-forcing their way in using common usernames like ADMIN, REMOTE, and TEST.
+RDP'd into the honeypot VM and opened Event Viewer. Found 36,000+ Event ID 4625 audit failures. These are real attackers brute-forcing their way in using common usernames like ADMIN, REMOTE, and TEST.
 
 ---
 
@@ -45,7 +45,7 @@ Connected Microsoft Sentinel and configured the Windows Security Events via AMA 
 ## Step 5 – Enriched Logs with Geolocation Data
 <img width="700" src="https://github.com/user-attachments/assets/e8fdf863-d1a9-4005-8883-231c6d856208" />
 
-Imported a 54,000-row IP geolocation watchlist into Sentinel. Used an ipv4_lookup KQL query to enrich raw logs with city, country, latitude, and longitude — showing exactly where attacks are coming from.
+Imported a 54,000-row IP geolocation watchlist into Sentinel. Used an ipv4_lookup KQL query to enrich raw logs with city, country, latitude, and longitude. This showed exactly where attacks were coming from.
 
 ---
 
