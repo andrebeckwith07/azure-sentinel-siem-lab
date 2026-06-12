@@ -8,14 +8,14 @@ Deployed a Windows 10 honeypot VM in Azure, forwarded security logs to Microsoft
 ---
 
 ## Architecture
-![Architecture Diagram](Screenshot_2026-06-12_172207.png)
+![Architecture Diagram](Screenshot 2026-06-12 172207.png)
 
 Real-world attackers on the public internet hit the honeypot VM through an intentionally open NSG (Network Security Group). The VM forwards its security logs to a Log Analytics Workspace, which feeds into Microsoft Sentinel (the SIEM). Sentinel then powers the live attack map showing where attacks are coming from globally.
 
 ---
 
 ## Step 1 – Deployed the Honeypot VM
-![Honeypot VM](Screenshot_2026-06-12_165529.png)
+![Honeypot VM](Screenshot 2026-06-12 165529.png)
 Deployed a Windows 10 VM in Azure configured as a honeypot. Set the Network Security Group to allow all inbound traffic to expose it to the internet and attract real attackers.
 
 ## Step 2 – Observed Failed Login Attempts in Event Viewer
